@@ -13,7 +13,6 @@ phases:
   build:
     commands:
       - echo Build started on `14/05/2020`
-      - echo master Branch Script Called...
       - echo $SFDC_USERNAME
       - echo $SFDC_PASSWORD
       - echo $SFDC_TOKEN
