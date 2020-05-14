@@ -17,7 +17,7 @@ phases:
       - echo $SFDC_PASSWORD
       - echo $SFDC_TOKEN
       - echo $SFDC_SERVERURL
-      - ant -buildfile build/build.xml deployEmptyCheckOnly -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASSWORD$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
+      - ant -buildfile build/build.xml deployCode -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASSWORD$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
   post_build:
     commands:
       - echo Build completed on `14/05/2020`
