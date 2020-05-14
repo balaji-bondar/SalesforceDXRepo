@@ -10,7 +10,7 @@ defaults: &defaults
             - echo $SFDC_PASS
             - echo $SFDC_TOKEN
             - echo $SFDC_SERVERURL
-            - ant -buildfile build/build.xml deployEmptyCheckOnly -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
+            - ant -buildfile build/build.xml deployEmptyCheckOnly -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASSWORD$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
     
 phases:
   install:
@@ -24,10 +24,10 @@ phases:
       - echo Build started on `14/05/2020`
       - echo master Branch Script Called...
       - echo $SFDC_USERNAME
-      - echo $SFDC_PASS
+      - echo $SFDC_PASSWORD
       - echo $SFDC_TOKEN
       - echo $SFDC_SERVERURL
-      - ant -buildfile build/build.xml deployEmptyCheckOnly -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
+      - ant -buildfile build/build.xml deployEmptyCheckOnly -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASSWORD$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
   post_build:
     commands:
       - echo Build completed on `14/05/2020`
