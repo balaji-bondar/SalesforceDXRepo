@@ -1,0 +1,16 @@
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `14/05/2020`
+  post_build:
+    commands:
+      - echo Build completed on `14/05/2020`
+artifacts:
+  files:
+    - target/messageUtil-1.0.jar
