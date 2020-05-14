@@ -3,6 +3,19 @@ version: 0.2
 defaults: &defaults
   docker:
     - image: circleci/node:latest
+    - step:
+          script:
+            - echo "master Branch Script Called."
+            - echo $SFDC_USERNAME
+            - echo $SFDC_PASS
+            - echo $SFDC_TOKEN
+            - echo $SFDC_SERVERURL
+            - ant -buildfile build/build.xml deployEmptyCheckOnly -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
+    master:
+      - step:
+          script:
+            - echo "master Branch Script Called."
+            - ant -buildfile build/build.xml deployCode -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
     
 phases:
   install:
