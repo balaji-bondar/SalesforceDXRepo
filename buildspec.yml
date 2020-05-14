@@ -4,9 +4,9 @@ defaults: &defaults
   docker:
     - image: abhisheksaxena7/salesforcedockerimg
 phases:
-  install:
-    runtime-versions:
-      java: corretto11
+  #install:
+    #runtime-versions:
+      #java: corretto11
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
