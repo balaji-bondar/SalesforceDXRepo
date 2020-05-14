@@ -19,6 +19,13 @@ phases:
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
+       - echo master Branch Script Called...
+       - echo $SFDC_USERNAME
+       - echo $SFDC_PASS
+       - echo $SFDC_TOKEN
+       - echo $SFDC_SERVERURL
+       - ant -buildfile build/build.xml deployEmptyCheckOnly -Dsfdc.username=$SFDC_USERNAME -Dsfdc.password=$SFDC_PASS$SFDC_TOKEN -Dsfdc.serverurl=https://$SFDC_SERVERURL
+    
   build:
     commands:
       - echo Build started on `14/05/2020`
