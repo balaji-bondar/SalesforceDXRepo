@@ -1,3 +1,3 @@
 trigger AccountTrigger on Account (after insert) {
-//business logic
+//business logic : Updated by AWS CodeBuild Job
 }
