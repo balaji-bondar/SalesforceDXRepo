@@ -1,4 +1,9 @@
 version: 0.2
+# Defining default values for all jobs
+defaults: &defaults
+  docker:
+    - image: circleci/node:latest
+    
 phases:
   install:
     runtime-versions:
